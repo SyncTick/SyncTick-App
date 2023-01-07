@@ -1,5 +1,5 @@
 startTimer(60, document.getElementById("timer"));
-// user puts timer 
+// user puts timer ^^^
 
 
 function startTimer(duration, display) {
