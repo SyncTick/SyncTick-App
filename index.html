@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="clock.png" />
+    <script
+      src="https://kit.fontawesome.com/9180ccaa78.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Pomodoro</title>
+  </head>
+  <body>
+    <div id="settings">
+      <i class="fas fa-cog"> </i>
+      <p>Setting</p>
+    </div>
+    <div id="container">
+      <p class="set active" id="pomodoro" data-min="25">Pomodoro</p>
+      <p class="set" id="short" data-min="5">Short Break</p>
+      <p class="set" id="long" data-min="10">Long Break</p>
+
+      <p id="timer">25:00</p>
+
+      <button id="btn">START</button>
+    </div>
+    <div id="about">
+      Design and concept inspired by
+      <a href="https://uzu.works/" target="_blank"> Yuya Uzu </a> made by
+      <a href="https://github.com/cadelacruza" target="_blank">Carlos</a>
+    </div>
+
+    <div class="modal-wrapper">
+      <div id="modal" class="some">
+        <div id="modal-title">
+          <h1>TIMER SETTING</h1>
+          <span id="close">&times;</span>
+        </div>
+        <hr />
+
+        <div>
+          <p>Time (minutes)</p>
+        </div>
+        <div id="modal-time">
+          <div class="setTimer">
+            <label for="pom">Pomodoro</label>
+            <input type="number" min="1" max="60" value="25" id="pom" />
+          </div>
+          <div class="setTimer">
+            <label for="shorter">Short Break</label>
+            <input type="number" min="1" max="60" value="5" id="shorter" />
+          </div>
+          <div class="setTimer">
+            <label for="longer">Long Break</label>
+            <input type="number" min="1" max="60" value="10" id="longer" />
+          </div>
+        </div>
+
+        <hr />
+
+        <div id="modal-toggle">
+          <p>Auto start next session?</p>
+
+          <label class="switch">
+            <input type="checkbox" id="check" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <hr />
+
+        <div id="modal-volume">
+          <p>Volume</p>
+          <input
+            type="range"
+            min="0.01"
+            max="1"
+            step="0.01"
+            value="50"
+            id="volume"
+          />
+        </div>
+
+        <div id="modal-button">
+          <button id="boton-m">OK</button>
+        </div>
+      </div>
+    </div>
+    <audio
+      id="audio"
+      src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg"
+    ></audio>
+    <script src="app.js"></script>
+  </body>
+</html>
